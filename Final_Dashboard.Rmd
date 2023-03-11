@@ -1,0 +1,88 @@
+---
+title: "Crime in Seattle"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+
+Column {data-width=325}
+-----------------------------------------------------------------------
+
+### Number of Crime by Offense Category and Neighbourhood
+```{r}
+readRDS("multi01.rds")
+```
+
+### Number of Crime by Offense Category and Time of a Day
+```{r}
+readRDS("multi02.rds")
+```
+
+Column {data-width=325}
+-----------------------------------------------------------------------
+
+### Crime by Time of a Day
+```{r}
+readRDS("barplot.rds")
+```
+
+### Crime by Time of a Day by Precinct
+
+```{r}
+readRDS("coloredbar.rds")
+```
+
+### Top 10 Offense of Crime
+
+```{r}
+readRDS("top10ofs_bar.rds")
+```
+
+Column {data-width=175}
+-----------------------------------------------------------------------
+### OVERVIEW
+
+```{r}
+readRDS("PiebyPrecinct.rds")
+```
+
+### WEST
+
+```{r}
+readRDS("WEST.rds")
+```
+
+### EAST
+
+```{r}
+readRDS("EAST.rds")
+```
+
+
+Column {data-width=175}
+-----------------------------------------------------------------------
+### NORTH
+
+```{r}
+readRDS("NORTH.rds")
+```
+
+### SOUTH
+
+```{r}
+readRDS("SOUTH.rds")
+```
+
+### SOUTHWEST
+
+```{r}
+readRDS("SOUTHWEST.rds")
+```
+
